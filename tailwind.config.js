@@ -21,8 +21,8 @@ module.exports = {
         '7xl': '60px',
       },
       colors:{
-        'orange': '#ff7d00',
-        'light-orange':'#ff9e00',
+        'pink': '#ea185f',
+        'light-pink':'#c9559c',
         'green': '#38b000'
       }
     },
