@@ -12,6 +12,7 @@ module.exports = {
         xsm: '12px',
         sm: '13px',
         reg: '15px',
+        reg2:'16px',
         lg: '18px',
         '2xl': '22px',
         '3xl': '25px',
@@ -23,7 +24,8 @@ module.exports = {
       colors:{
         'pink': '#ea185f',
         'light-pink':'#c9559c',
-        'green': '#38b000'
+        'green': '#38b000',
+        'grey': '#e5e5e5'
       }
     },
   },
