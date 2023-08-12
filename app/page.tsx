@@ -3,98 +3,104 @@ import Image from 'next/image';
 export default function Home() {
   return (
     <main className=" min-h-screen w-screen justify-between bg-gray-100">
-    <main className="max-w-screen-2xl m-auto bg-white">
-      {/* navbar */}
-      <nav className="bg-white p-2 flex justify-between">
-        <a href="" className="font-bold text-gray-700 text-2xl">
-          FindATable
-        </a>
-        <div>
-          <div className="flex">
-            <button className="bg-light-pink hover:bg-pink p-2 px-4 rounded mr-2 text-sm text-white">
-              Sign In
-            </button>
-            <button className="p-2 px-4 hover:bg-slate-100 rounded mr-2 text-sm">
-              SignUp
-            </button>
-          </div>
-        </div>
-      </nav>
-      {/* navbar */}
-      {/* Header */}
-      <section className=" bg-gradient-to-r from-[#a8a8a8] to-[#3b3758]">
-        {/* SearchBar */}
-        <section className="text-left py-2 m-auto flex justify-center">
-              <input
-                type="text"
-                className="text-lg w-[450px] p-1 rounded mr-5"
-                placeholder="State... City...Town"
-              />
-              <button className="bg-light-pink p-2 px-4 text-sm rounded hover:bg-pink">
-                Find It
+      <main className="max-w-screen-2xl m-auto bg-white">
+        {/* navbar */}
+        <nav className="bg-white p-2 flex justify-between">
+          <a href="" className="font-bold text-gray-700 text-2xl">
+            FindATable
+          </a>
+          <div>
+            <div className="flex">
+              <button className="bg-light-pink hover:bg-pink p-2 px-4 rounded mr-2 text-sm text-white">
+                Sign In
               </button>
-            </section>
-            {/* SearchBAR */}
-      </section>
-      {/* Header */}
-      <section className='flex py-4 m-auto w-2/3 justify-between items-start'>
-        <div className='w-1/5'>
-          <div className='border-b pb-4'>
-            <h1 className='mb-2'>
-              Region
-            </h1>
-            <p className="font-light text-reg">Toronto</p>
-            <p className="font-light text-reg">San Francisco</p>
-            <p className="font-light text-reg">Oslo Norway</p>
-            <p className="font-light text-reg">New York</p>
-          </div>
-          <div className='border-b pb-4'>
-            <h1 className='mb-2'>
-              Cuisine
-            </h1>
-            <p className="font-light text-reg">Mexican</p>
-            <p className="font-light text-reg">Italian</p>
-            <p className="font-light text-reg">Chinese</p>
-            <p className="font-light text-reg">Persian</p>
-          </div>
-          <div className='mt-3 pb-4'>
-            <h1 className='mb-2'>Price</h1>
-            <div className='flex'>
-              <button className='border rounded-l p-2 w-full text-reg font-light '>$</button>
-              <button className='border-r border-t border-b  p-2 w-full text-reg font-light '>$$</button>
-              <button className='border-r border-t border-b  rounded-r p-2 w-full text-reg font-light '>$$$</button>  
+              <button className="p-2 px-4 hover:bg-slate-100 rounded mr-2 text-sm">
+                SignUp
+              </button>
             </div>
           </div>
-        </div>
-        {/* Search side bar */}
-        <section className='w-5/6'>
-          {/* Restaurant card */}
-          <div className='border-b flex p-5'>
-            <img src="https://images.otstatic.com/prod/25294208/1/medium.jpg" className='w-[32%] rounded' alt="" />
-            <section className="pl-5">
-              <h2 className='text-2xl'> Butcher and Banker NYC</h2>
-              <div className="flex items-start">
-                <div className="flex mb-2">
-                  ****
+        </nav>
+        {/* navbar */}
+        <section className="border-t h-screen">
+          <div className="py-9 w-3/5 m-auto">
+            {/* Header */}
+            <section>
+              <h3 className="font-bold">You're almost done</h3>
+              <div className="mt-5 flex">
+                <img
+                  src=" https://images.otstatic.com/prod/25294208/1/medium.jpg"
+                  className="width-32 h-18 rounded"
+                  alt=""
+                />
+                <div className="ml-4">
+                  <h1 className="text-2xl font-bold">Butcher and Banker NYC</h1>
+                  <div className="flex mt-3">
+                    <p className="mr-6">Tues, 14, 2023</p>
+                    <p className="mr-6">7:30pm</p>
+                    <p className="mr-6">3 people</p>
+                  </div>
                 </div>
-                <p className='ml-2 text-sm'>Awesome</p>
-              </div>
-              <section className='mb-7'>
-              <div className="font-light flex text-reg">
-                <p className='mr-4'>$$$</p>
-                <p className='mr-4'>Steakhouse</p>
-                <p className='mr-4'>Midtown west</p>
               </div>
             </section>
-            <section className='text-pink'>
-              <a href=""> View more information</a>
+            {/* Header */}
+            {/* Form */}
+            <section className="mt-10 flex flex-wrap justify-between w-[660px]">
+              <input
+                type="text"
+                className="border rounded  p-3 w-80 mb-4"
+                name=""
+                id=""
+                placeholder="First Name"
+              />
+              <input
+                type="text"
+                className="border rounded  p-3 w-80 mb-4"
+                name=""
+                id=""
+                placeholder="Last Name"
+              />
+              <input
+                type="text"
+                className="border rounded  p-3 w-80 mb-4"
+                name=""
+                id=""
+                placeholder="Email"
+              />
+              <input
+                type="tel"
+                className="border rounded  p-3 w-80 mb-4"
+                name=""
+                id=""
+                placeholder="Phone Number"
+              />
+              <input
+                type="text"
+                className="border rounded  p-3 w-80 mb-4"
+                name=""
+                id=""
+                placeholder="Occasion (optional)"
+              />
+              <input
+                type="text"
+                className="border rounded  p-3 w-80 mb-4"
+                name=""
+                id=""
+                placeholder="Requests (optional)"
+              />
+              <button className=" bg-light-pink hover:bg-pink w-full p-3 text-white rounded disabled:bg-gray-300">
+                {' '}
+                Complete Reservation
+              </button>
+              <p className='text-sm mt-5'>
+                By clicking “Complete reservation” you agree to the OpenTable
+                Terms of Use and Privacy Policy. Message & data rates may apply.
+                You can opt out of receiving text messages at any time in your
+                account settings or by replying STOP.
+              </p>
             </section>
-            </section>
+            {/* Form */}
           </div>
-          {/* Restaurant Card */}
         </section>
-        {/* Search side bar */}
-      </section>
       </main>
     </main>
   );
