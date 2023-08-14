@@ -48,6 +48,7 @@ export default function Home() {
         <div className="py-3 px-35 m-5 flex flex-wrap">
           {/* Card */}
           <div className="w-64 h-70 cursor-pointer  rounded border overflow-hidden">
+            <Link href={"/restaurant/Nordvegan"}>
             <img
               src="https://resizer.otstatic.com/v2/photos/wide-huge/3/46953593.webp"
               alt=""
@@ -66,6 +67,7 @@ export default function Home() {
             </section>
             <p className='text-sm mt-1 font-bold '>Booked 3 times today</p>
             </div>
+            </Link>
           
           </div>
           {/* Card */}

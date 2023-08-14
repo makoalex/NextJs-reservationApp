@@ -36,12 +36,12 @@ export default function RestaurantMenu() {
         <div className="bg-white w-[100%] rounded shadow p-3 -ml-5">
           {/* Restaurant Nav */}
           <nav className="flex text-reg border-b pb-2">
-            <a className="mr-7" href="#">
+            <Link className="mr-7" href={"/restaurant/Nordvegan"}>
               overview
-            </a>
-            <a className="mr-7" href="">
+            </Link>
+            <Link  className="mr-7" href={"/restaurant/Nordvegan/menu"}>
               Menu
-            </a>
+            </Link>
           </nav>
           {/* Restaurant Nav */}
           {/* Menu */}
