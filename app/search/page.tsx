@@ -1,29 +1,15 @@
 import Link from 'next/link'
 import React from 'react'
+import NavBar from '../components/NavBar'
 
 export default function Search() {
   return (
     <main className=" min-h-screen w-screen justify-between bg-gray-100">
   <main className="max-w-screen-2xl m-auto bg-white">
     {/* navbar */}
-    <nav className="bg-white p-2 flex justify-between">
-    <Link href="/" className="font-bold text-gray-700 text-2xl">
-          {" "}FindATable{" "}
-    </Link>
-      <div>
-        <div className="flex">
-          <button
-            className="bg-light-pink hover:bg-pink p-2 px-4 rounded mr-2 text-sm text-white"
-          >
-            Sign In
-          </button>
-          <button className="p-2 px-4 hover:bg-slate-100 rounded mr-2 text-sm">
-            SignUp
-          </button>
-        </div>
-      </div>
-    </nav>
-    {/* navbar */} {/* Header */}
+    <NavBar/>
+    {/* navbar */} 
+    {/* Header */}
     <section className=" bg-gradient-to-r from-[#a8a8a8] to-[#3b3758]">
       {/* SearchBar */}
       <section className="text-left py-2 m-auto flex justify-center">
