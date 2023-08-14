@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 export default function Search() {
@@ -6,7 +7,9 @@ export default function Search() {
   <main className="max-w-screen-2xl m-auto bg-white">
     {/* navbar */}
     <nav className="bg-white p-2 flex justify-between">
-      <a href="" className="font-bold text-gray-700 text-2xl"> FindATable </a>
+    <Link href="/" className="font-bold text-gray-700 text-2xl">
+          {" "}FindATable{" "}
+    </Link>
       <div>
         <div className="flex">
           <button

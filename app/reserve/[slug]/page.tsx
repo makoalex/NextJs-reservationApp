@@ -1,4 +1,6 @@
+import Link from 'next/link'
 import React from 'react'
+
 
 export default function Reserve() {
   return (
@@ -6,9 +8,9 @@ export default function Reserve() {
     <main className="max-w-screen-2xl m-auto bg-white">
       {/* navbar */}
       <nav className="bg-white p-2 flex justify-between">
-        <a href="" className="font-bold text-gray-700 text-2xl">
-          FindATable
-        </a>
+        <Link href="/" className="font-bold text-gray-700 text-2xl">
+          {" "}FindATable{" "}
+        </Link>
         <div>
           <div className="flex">
             <button className="bg-light-pink hover:bg-pink p-2 px-4 rounded mr-2 text-sm text-white">
