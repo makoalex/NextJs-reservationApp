@@ -1,6 +1,9 @@
+
 import NavBar from '@/app/components/NavBar'
-import Link from 'next/link'
 import React from 'react'
+import Header from '../components/Header'
+import RestaurantNavBar from '../components/RestaurantNavBar'
+import Menu from '../components/Menu'
 
 export default function RestaurantMenu() {
   return (
@@ -10,44 +13,16 @@ export default function RestaurantMenu() {
       <NavBar/>
       {/* navbar */}
       {/* Header */}
-      <section className="h-96 overflow-hidden">
-        <div className=" bg-gradient-to-r from-[#6f6e6e] to-[#3b3758]  h-full flex justify-center items-center">
-          <h1 className="text-7xl text-white capitalize text-shadow text-center font-light">
-            Nordvegan (Oslo)
-          </h1>
-        </div>
-      </section>
+   <Header/>
       {/* Header */}
       {/* Description part */}
       <section className="flex m-auto w-2/3 start-0 -mt-11">
         <div className="bg-white w-[100%] rounded shadow p-3 -ml-5">
           {/* Restaurant Nav */}
-          <nav className="flex text-reg border-b pb-2">
-            <Link className="mr-7" href={"/restaurant/Nordvegan"}>
-              overview
-            </Link>
-            <Link  className="mr-7" href={"/restaurant/Nordvegan/menu"}>
-              Menu
-            </Link>
-          </nav>
+          <RestaurantNavBar />
           {/* Restaurant Nav */}
           {/* Menu */}
-          <main className="bg-white mt-10">
-            <div>
-              <div className="mt-4 pb-1 mb-1">
-                <h1 className="text-lg">MENU</h1>
-              </div>
-              <div className="flex flex-wrap justify-between">
-                {/* Menu Card */}
-                <div className='border rounded-sm p-3 w-[50%] mb-3'>
-                  <h3 className='text-lg font-bold'>Fried dumplings</h3>
-                  <p className='font-light mt-2 text-reg'> Also called Gyoza, these Japanese-style dumplings are very popular.</p>
-                <p className="mt-7">130 ,-</p>
-                </div>
-                {/* Menu Card */}
-              </div>
-            </div>
-          </main>
+            <Menu/>
           {/* Menu */}
         </div>
       </section>
