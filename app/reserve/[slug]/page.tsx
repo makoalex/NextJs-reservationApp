@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function page() {
+export default function Reserve() {
   return (
     <main className=" min-h-screen w-screen justify-between bg-gray-100">
     <main className="max-w-screen-2xl m-auto bg-white">
