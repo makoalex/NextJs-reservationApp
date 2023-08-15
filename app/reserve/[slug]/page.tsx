@@ -1,5 +1,4 @@
 import NavBar from '@/app/components/NavBar'
-import Link from 'next/link'
 import React from 'react'
 import Header from './components/Header'
 import Form from './components/Form'
@@ -18,7 +17,7 @@ export default function Reserve() {
           <Header />
           {/* Header */}
           {/* Form */}
-            <Form />
+           <Form />
           {/* Form */}
         </div>
       </section>
