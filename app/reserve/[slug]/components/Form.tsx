@@ -45,7 +45,7 @@ export default function Form() {
               id=""
               placeholder="Requests (optional)"
             />
-            <button className=" bg-light-pink hover:bg-pink w-full p-3 text-white rounded disabled:bg-gray-300">
+            <button className=" bg-gold hover:yellow w-full p-3 text-white rounded disabled:bg-gray-300">
               {' '}
               Complete Reservation
             </button>
