@@ -15,7 +15,7 @@ export default function SearchBar() {
       onChange={(e) => setLocation(e.target.value.toLowerCase())}
     />
     <button
-      className="bg-light-pink p-2 px-4 text-sm rounded hover:bg-pink"
+      className="bg-gold p-2 px-5 text-sm rounded hover:bg-yellow text-white "
       onClick={() => {
         if (location === 'banana') return;
         router.push('/search');

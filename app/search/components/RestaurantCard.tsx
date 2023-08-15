@@ -22,7 +22,7 @@ export default function RestaurantCard() {
           <p className="mr-4">Midtown west</p>
         </div>
       </section>
-      <section className="text-pink">
+      <section className="text-red">
         <Link href="/restaurant/Nordvegan"> View more information</Link>
       </section>
     </section>

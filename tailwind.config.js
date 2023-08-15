@@ -22,10 +22,10 @@ module.exports = {
         '7xl': '60px',
       },
       colors:{
-        'pink': '#ea185f',
-        'light-pink':'#c9559c',
+        'yellow': '#ecbf64',
+        'gold':' #b38b59',
         'green': '#38b000',
-        'grey': '#e5e5e5'
+        'grey': '#f0f0f0'
       }
     },
   },

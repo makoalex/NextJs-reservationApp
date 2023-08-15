@@ -4,7 +4,7 @@ import SearchBar from './SearchBar';
 export default function Header() {
 
   return (
-    <div className="h-60 bg-gradient-to-r from-[#a8a8a8] pt-6 from-20% to-[#3b3758] to-90%">
+    <div className="h-72 bg-gradient-to-r from-[#102310]  to-[#113e21] pt-6">
     <div className="text-center font-light mt-10">
       <h1 className="text-white text-4xl pb-2 font-light mr-6">
         A table for any occasion
