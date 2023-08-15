@@ -9,7 +9,7 @@ export default function NavBar() {
           <Link href="/" className="font-bold flex text-gray-700 items-center text-2xl">
             <img className='w-[80px] h-[80px]  ' src='logo.png' alt="" />
         
-            <h3 className='ml-0'>ReservEats</h3>
+            <h3 className='ml-0 font-sans antialiased'>ReservEats</h3>
           </Link>
           <div>
             <div className="flex">
