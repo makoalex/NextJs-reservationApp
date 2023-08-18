@@ -5,7 +5,7 @@ import logo from '../../html/logo.png'
 
 export default function NavBar() {
   return (
-    <nav className="bg-white h-14 body-font font-raleway-300  flex justify-between items-center">
+    <nav className="bg-white h-14 body-font font-raleway-300  flex grow-1 justify-between items-center">
           <Link href="/" className="font-bold flex text-gray-700 items-center text-2xl">
             <img className='w-[80px] h-[80px]  ' src='logo.png' alt="" />
         
