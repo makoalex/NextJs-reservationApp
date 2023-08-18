@@ -7,7 +7,6 @@ type Data = {
   name: string;
 };
 
-
 export async function GET(request: Request) {
   await prisma.item.deleteMany();
   await prisma.restaurant.deleteMany();
@@ -55,7 +54,7 @@ export async function GET(request: Request) {
         cuisineId: indianCuisineId,
       },
       {
-        name: 'Der Peppern Gror Rådhusplassen',
+        name: 'Der Peppern Gror',
         mainImage:
           'https://media-cdn.tripadvisor.com/media/photo-s/26/92/a2/af/caption.jpg',
         price: PRICE.REGULAR,
@@ -150,7 +149,7 @@ export async function GET(request: Request) {
         cuisineId: indianCuisineId,
       },
       {
-        name: 'New Ambassadør Indisk Restaurant',
+        name: 'New Ambassadør Restaurant',
         mainImage:
           'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/5d/81/cb/eat-drink-and-enjoy.jpg?w=1200&h=800&s=1',
         price: PRICE.REGULAR,
@@ -225,7 +224,7 @@ export async function GET(request: Request) {
         cuisineId: mexicanCuisineId,
       },
       {
-        name: "Cartel's Latin American Kitchen & Bar",
+        name: "Cartel's Latin American",
         mainImage:
           'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/25/56/da/94/cartel-s.jpg?w=1200&h=-1&s=1',
         price: PRICE.CHEAP,
@@ -258,6 +257,26 @@ export async function GET(request: Request) {
         openTime: '11:00:00.000Z',
         closeTime: '20:00:00.000Z',
         slug: 'camino mexican-cuisine-oslo',
+        locationId: osloLocationId,
+        cuisineId: mexicanCuisineId,
+      },
+      {
+        name: 'Freddy Fuego Burrito Bar',
+        mainImage:
+          'https://media-cdn.tripadvisor.com/media/photo-s/08/74/f8/ff/freddy-fuego.jpg',
+        price: PRICE.CHEAP,
+        description:
+          "At Freddy's we take great pride in our healthy, freshly-made burritos. We only use the freshest of ingredients. We don’t freeze, and we don’t fry. We serve it up fresh and fast in the heart of Oslo.",
+
+        images: [
+          'https://media-cdn.tripadvisor.com/media/photo-s/08/74/f9/03/freddy-fuego.jpg',
+          'https://media-cdn.tripadvisor.com/media/photo-f/12/c6/b0/cb/slow-cooked-pork-burrito.jpg',
+          'https://media-cdn.tripadvisor.com/media/photo-l/0f/f0/1d/b8/photo0jpg.jpg',
+          'https://media-cdn.tripadvisor.com/media/photo-f/0c/02/b3/ad/20160716-135539-largejpg.jpg',
+        ],
+        openTime: '15:30:00.000Z',
+        closeTime: '21:00:00.000Z',
+        slug: 'freddy-cuisine-oslo',
         locationId: osloLocationId,
         cuisineId: mexicanCuisineId,
       },
@@ -320,8 +339,7 @@ export async function GET(request: Request) {
       },
       {
         name: 'Olivia Aker Brygger',
-        mainImage:
-          'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/9f/df/13/velkommen-til-italia.jpg?w=1200&h=-1&s=1',
+        mainImage:'https://media-cdn.tripadvisor.com/media/photo-s/0f/8c/78/80/olivia-aker-brygge.jpg',
         price: PRICE.REGULAR,
         description: '... NÆRMERE ITALIA KOMMER DU IKKE',
         images: [
@@ -337,7 +355,7 @@ export async function GET(request: Request) {
         cuisineId: italianCuisineId,
       },
       {
-        name: 'Proseccheria Restaurant &Vinbar',
+        name: 'Proseccheria Restaurant',
         mainImage:
           'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/c0/be/8b/try-our-own-import-wines.jpg?w=700&h=500&s=1',
         price: PRICE.REGULAR,
@@ -399,68 +417,70 @@ export async function GET(request: Request) {
   });
   const restaurants = await prisma.restaurant.findMany();
   const gandhiId =
-  restaurants.find((restaurant) => restaurant.name === '1947 By Gandhi')
-  ?.id || 1
+    restaurants.find((restaurant) => restaurant.name === '1947 By Gandhi')
+      ?.id || 1;
   const peppernId =
-  restaurants.find(
-    (restaurant) => restaurant.name === 'Der Peppern Gror Rådhusplassen'
-    )?.id || 1
+    restaurants.find((restaurant) => restaurant.name === 'Der Peppern Gror')
+      ?.id || 1;
   const mantraId =
     restaurants.find((restaurant) => restaurant.name === 'MANTRA by Mr India')
-      ?.id || 1
+      ?.id || 1;
   const spiceId =
     restaurants.find((restaurant) => restaurant.name === 'Spice Rootz')?.id ||
-    1
+    1;
   const anarkaliId =
     restaurants.find((restaurant) => restaurant.name === 'New Anarkali')?.id ||
-    1
+    1;
   const villageId =
     restaurants.find((restaurant) => restaurant.name === 'Village Tandoori')
-      ?.id || 1
+      ?.id || 1;
   const ambassadorId =
     restaurants.find(
-      (restaurant) => restaurant.name === 'New Ambassadør Indisk Restaurant'
-    )?.id || 1
+      (restaurant) => restaurant.name === 'New Ambassadør Restaurant'
+    )?.id || 1;
   const indieSpiceId =
     restaurants.find((restaurant) => restaurant.name === 'IndiSpice Restaurant')
-      ?.id || 1
+      ?.id || 1;
   const cielitoId =
     restaurants.find((restaurant) => restaurant.name === 'Cielito Oslo')?.id ||
-    1
+    1;
   const muchoMasId =
-    restaurants.find((restaurant) => restaurant.name === 'Mucho Mas')?.id || 1
+    restaurants.find((restaurant) => restaurant.name === 'Mucho Mas')?.id || 1;
   const cartelId =
     restaurants.find(
-      (restaurant) =>
-        restaurant.name === "Cartel's Latin American Kitchen & Bar"
-    )?.id || 1
+      (restaurant) => restaurant.name === "Cartel's Latin American"
+    )?.id || 1;
+  const freddyId =
+    restaurants.find(
+      (restaurant) => restaurant.name === 'Freddy Fuego Burrito Bar'
+    )?.id || 1;
   const caminoId =
     restaurants.find((restaurant) => restaurant.name === 'El Camino')?.id || 1;
   const ruffinoId =
     restaurants.find(
       (restaurant) => restaurant.name === 'Ruffino Ristorante Italiano'
-    )?.id || 1
+    )?.id || 1;
   const bassoId =
     restaurants.find((restaurant) => restaurant.name === 'Basso Social')?.id ||
-    1
+    1;
   const mangiamoId =
     restaurants.find(
       (restaurant) => restaurant.name === 'Mangiamo Ristorante & Bar'
-    )?.id || 1
+    )?.id || 1;
   const oliviaId =
     restaurants.find((restaurant) => restaurant.name === 'Olivia Aker Brygger')
-      ?.id || 1
+      ?.id || 1;
 
   const proseccheriaId =
     restaurants.find(
-      (restaurant) => restaurant.name === 'Proseccheria Restaurant &Vinbar'
-    )?.id || 1
+      (restaurant) => restaurant.name === 'Proseccheria Restaurant'
+    )?.id || 1;
   const scarpettaId =
     restaurants.find((restaurant) => restaurant.name === 'Scarpetta Pasta Bar')
-      ?.id || 1
+      ?.id || 1;
   const roaldId =
     restaurants.find((restaurant) => restaurant.name === 'Roald & Umberto')
-      ?.id || 1
+      ?.id || 1;
 
   await prisma.item.createMany({
     data: [
@@ -834,6 +854,42 @@ export async function GET(request: Request) {
         restaurantId: caminoId,
       },
       {
+        name: 'El Pollo Pachanga - Juicy Chicken',
+        description:
+          'Tender chicken marinated in chillies, herbs and spices. Comes with Mexican rice, healthy black beans, roasted peppers and onions, cheese, sour cream, and one of our fresh regional salsas',
+        price: '199 kr',
+        restaurantId: freddyId,
+      },
+      {
+        name: 'El Clásico - Tender Beef',
+        description:
+          "Select cuts of quality Strøm Larsen beef marinated in Freddy's secret blend of spices and chillies.",
+        price: '220 kr',
+        restaurantId: freddyId,
+      },
+      {
+        name: 'Cochinita Pibil Burrito',
+        description:
+          'Strøm Larsen supplied pork, slow-cooked overnight in a marinade of achiote, citrus fruits and cinnamon. The burrito is made with coriander and onions.',
+        price: '220 kr',
+        restaurantId: freddyId,
+      },
+      {
+        name: 'El Veggie Verde - Vegetarian',
+        description:
+          'Veggie burrito with roasted sweet potato, red peppers and onions, healthy black beans, cheese, sour cream, and one of our fresh regional salsas. (no rice).',
+        price: '185 kr',
+        restaurantId: freddyId,
+      },
+      {
+        name: 'El Puerco Picante - Succulent Pork',
+        description:
+          "Succulent pork marinated in Freddy's famous blend of dried whole chilies. Comes with Mexican rice, black beans, roasted peppers, coriander, onions, cheese, sour cream, and one of our fresh regional salsas.",
+        price: '199kr',
+        restaurantId: freddyId,
+      },
+
+      {
         name: 'PASTOR',
         description:
           'Marinated shaved pork, pineapple, red onion dice, cilantro, salsa verde, corn tortilla',
@@ -1007,7 +1063,6 @@ export async function GET(request: Request) {
         price: '220 kr',
         restaurantId: roaldId,
       },
-     
     ],
   });
   return new Response('hello');
