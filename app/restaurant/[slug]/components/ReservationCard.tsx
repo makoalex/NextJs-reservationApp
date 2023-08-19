@@ -31,7 +31,7 @@ export default function ReservationCard() {
       </div>
     </div>
     <section className="mt-5 p-2">
-      <button className="bg-light-pink hover:bg-pink rounded w-full py-4 px-10 text-white font-bold">
+      <button className="bg-gold hover:bg-yellow rounded w-full py-4 px-10 text-white font-bold">
         Find your time
       </button>
     </section>
