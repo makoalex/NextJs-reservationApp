@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function ReservationCard() {
   return (
-    <div className="fixed bg-white w-[15%] rounded pb-3 ml-14 shadow">
+    <div className="fixed bg-white w-[18%] rounded pb-3 ml-14 shadow">
     <div className="text-center border-b pb-3 mt-1 font-bold">
       <h4 className="ml-5 text-lg">Make a Reservation</h4>
     </div>
@@ -19,7 +19,7 @@ export default function ReservationCard() {
         <label htmlFor="">Date</label>
         <input
           type="text"
-          className="py-1 border-b fot-light w-[28% ]"
+          className="py-1 border-b  w-[28% ]"
         />
       </div>
       <div className="flex flex-col w-[48%] ml-2">
@@ -31,7 +31,7 @@ export default function ReservationCard() {
       </div>
     </div>
     <section className="mt-5 p-2">
-      <button className="bg-gold hover:bg-yellow rounded w-full py-4 px-10 text-white font-bold">
+      <button className="bg-gold hover:bg-yellow rounded w-full py-3 px-10 text-white font-bold">
         Find your time
       </button>
     </section>
