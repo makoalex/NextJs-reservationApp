@@ -9,7 +9,7 @@ export default function Images({ images }: { images: string[] }) {
       </h1>
       <div className="flex flex-wrap">
         {images.map((image) => (
-          <img className="w-72 h-auto m-3" src={image} alt="" />
+          <img className="w-72 h-72 m-3" src={image} alt="" />
         ))}
       </div>
     </>
