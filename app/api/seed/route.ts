@@ -67,7 +67,7 @@ export async function GET(request: Request) {
         ],
         openTime: '16:00:00.000Z',
         closeTime: '22:00:00.000Z',
-        slug: ' Der-Pepperen-Gror-indian-cuisine-oslo',
+        slug: ' Der-Pepperen-Gror-oslo',
         locationId: osloLocationId,
         cuisineId: indianCuisineId,
       },

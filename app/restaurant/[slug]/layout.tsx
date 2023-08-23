@@ -1,14 +1,16 @@
 import Header from './components/Header';
 
 export default function RestaurantLayout({
-    children,
-  }: {
-    children: React.ReactNode
-  }) {
+  children,
+  params,
+}: {
+  children: React.ReactNode;
+  params: { slug: string };
+}) {
   return (
     <main>
       {/* Header */}
-      <Header />
+      <Header name={params.slug} />
 
       {/* Header */}
       {/* Description part */}
