@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Header() {
   return (
-     <section className=" bg-gradient-to-r from-[#a8a8a8] to-[#3b3758]">
+     <section className=" bg-gradient-to-r  from-[#102310]  to-[#113e21] ">
      {/* SearchBar */}
     <SearchBar />
      {/* SearchBAR */}
