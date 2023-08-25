@@ -2,15 +2,18 @@
 import React, { useState } from 'react';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 
+
+
 export default function SearchBar() {
+  console.log();
   const router = useRouter();
   const [location, setLocation] = useState('');
-  const handleclick = ()=>{
-    if(location ==="") return
-    router.push(`/search?city = ${location}`)
-    setLocation("")
-  }
-   
+
+  const handleclick = () => {
+    if (location === '') return;
+    router.push(`/search?city=${location}`);
+    setLocation('');
+  };
   return (
     <section className="text-left py-2 m-auto flex justify-center">
       <input
@@ -23,7 +26,7 @@ export default function SearchBar() {
       <button
         className="bg-gold p-2 px-5 text-sm rounded hover:bg-yellow text-white "
         onClick={() => {
-          handleclick()
+          handleclick();
         }}
       >
         Find It
