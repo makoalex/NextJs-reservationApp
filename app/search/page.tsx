@@ -9,7 +9,17 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 const fecthRestaurantsByCity = (city: string |undefined) => {
-  if(!city) return prisma.restaurant.findMany()
+  const select = {
+    id: true,
+    name: true,
+    mainImage: true,
+    price: true,
+    cuisine: true,
+    location: true,
+    slug:true
+  }
+
+  if(!city) return prisma.restaurant.findMany({select})
   return  prisma.restaurant.findMany({
     where: {
       location: {
@@ -18,15 +28,7 @@ const fecthRestaurantsByCity = (city: string |undefined) => {
         },
       },
     },
-    select: {
-      id: true,
-      name: true,
-      mainImage: true,
-      price: true,
-      cuisine: true,
-      location: true,
-      slug:true,   
-    },
+    select
   });
 };
 
@@ -36,6 +38,7 @@ export default async function Search({
   searchParams: { city: string };
 }) {
   const restaurants = await fecthRestaurantsByCity(searchParams.city)
+  console.log(restaurants)
 
   return (
     <>
@@ -47,7 +50,7 @@ export default async function Search({
         {/* Search side bar */}
         <section className="w-5/6">
           {/* Restaurant card */}
-          <RestaurantCard />
+         {restaurants.length?  <RestaurantCard />: <p>Sorry, we found no restaurants in your area</p>}
           {/* Restaurant Card */}
         </section>
         {/* Search side bar */}
