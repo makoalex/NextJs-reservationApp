@@ -5,7 +5,7 @@ import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 
 
 export default function SearchBar() {
-  console.log();
+
   const router = useRouter();
   const [location, setLocation] = useState('');
 
