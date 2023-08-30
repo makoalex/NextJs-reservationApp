@@ -11,7 +11,23 @@ export default function SearchSideBar({
   locations: Location[];
   cuisines: Cuisine[];
   searchParams: { city?: string; cuisine?: string; price?: PRICE };
-}) {
+})
+
+{
+  const prices = [
+    {
+      price: PRICE.CHEAP,
+      label: '$',
+    },
+    {
+      price: PRICE.REGULAR,
+      label: '$$',
+    },
+    {
+      price: PRICE.EXPENSIVE,
+      label: '$$$',
+    },
+  ];
   return (
     <div className="w-1/5 ">
       <div className="border-b pb-4 flex flex-col">
@@ -52,43 +68,22 @@ export default function SearchSideBar({
       <div className="mt-3 pb-4">
         <h1 className="mb-2">Price</h1>
         <div className="flex">
-          <Link
-            href={{
-              pathname: '/search',
-              query: {
-                ...searchParams,
-                price: PRICE.CHEAP,
-              },
-            }}
-          >
-            <button className="border rounded-l p-2 w-full text-reg font-light ">
-              $
-            </button>
-          </Link>
-          <Link
-            href={{
-              pathname: '/search',
-              query: {
-                ...searchParams,
-                price: PRICE.REGULAR,
-              },
-            }}
-            className="border-r border-t border-b  p-2 w-full text-reg font-light "
-          >
-            $$
-          </Link>
-          <Link
-            href={{
-              pathname: '/search',
-              query: {
-                ...searchParams,
-                price: PRICE.EXPENSIVE,
-              },
-            }}
-            className="border-r border-t border-b  rounded-r p-2 w-full text-reg font-light "
-          >
-            $$$
-          </Link>
+          {prices.map(({price, label})=>(
+              <Link
+              href={{
+                pathname: '/search',
+                query: {
+                  ...searchParams,
+                  price,
+                },
+              }}
+            >
+              <button className="border rounded-l p-2 w-full text-reg font-light ">
+                {label}
+              </button>
+            </Link>
+            
+          ))} 
         </div>
       </div>
     </div>
