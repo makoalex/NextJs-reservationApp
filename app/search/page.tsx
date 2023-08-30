@@ -1,10 +1,8 @@
-import Link from 'next/link';
 import React from 'react';
-import NavBar from '../components/NavBar';
 import Header from './components/Header';
 import SearchSideBar from './components/SearchSideBar';
 import RestaurantCard from './components/RestaurantCard';
-import { PrismaClient } from '@prisma/client';
+import { Cuisine, PRICE, PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
@@ -42,7 +40,7 @@ const fetchCuisine = async () => {
 export default async function Search({
   searchParams,
 }: {
-  searchParams: { city: string };
+  searchParams: { city?: string; cuisine?: Cuisine; price?: PRICE };
 }) {
   const location = await fetchLocations();
   const cuisine = await fetchCuisine();
@@ -54,7 +52,11 @@ export default async function Search({
       <Header />
       {/* Header */}
       <section className="flex py-4 m-auto w-2/3 justify-between items-start">
-        <SearchSideBar locations = {location} cuisines ={cuisine}/>
+        <SearchSideBar
+          locations={location}
+          cuisines={cuisine}
+          searchParams={searchParams}
+        />
         {/* Search side bar */}
         <section className="w-5/6">
           {/* Restaurant card */}

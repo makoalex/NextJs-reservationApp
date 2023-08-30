@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { useRouter, usePathname, useSearchParams } from 'next/navigation';
+import { useRouter} from 'next/navigation';
 
 
 
